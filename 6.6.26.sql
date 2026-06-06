@@ -1,7 +1,7 @@
-Select top 1* from Products;
---Select * from SubCategories;
---Select * from Brands;
---Select * from Categories;
+Select * from Products;
+Select * from SubCategories;
+Select * from Brands;
+Select * from Categories;
 
 select count(*) as Total_products from Products;
 select max(price) as Max_price from Products;
@@ -87,3 +87,17 @@ SELECT MONTH(GETDATE()) AS CurrentMonth;
 SELECT DAY(GETDATE()) AS CurrentDay;
 
 SELECT 'SUMIT' AS "User"
+
+
+
+select * from Products
+INNER JOIN Categories
+ON Products.CategoryId=Categories.CategoryId;
+
+select * from Products
+LEFT JOIN Categories
+ON Products.CategoryId=Categories.CategoryId;
+
+select * from Products
+RIGHT JOIN Categories
+ON Products.CategoryId=Categories.CategoryId;
